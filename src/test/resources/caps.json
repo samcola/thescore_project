@@ -1,0 +1,16 @@
+[
+    {
+    "platformName": "Android",
+    "deviceName": "emulator-5554",
+    "app": "/Users/samanthaoliviacolaco/IdeaProjects/theScore_automation_project/src/test/resources/com.fivemobile.thescore_24.5.0.apk",
+    "automationName": "UiAutomator2",
+    "platformVersion": "14.0"
+    },
+    {
+      "platformName": "Android",
+      "deviceName": "emulator-5556",
+      "app": "/Users/samanthaoliviacolaco/IdeaProjects/theScore_automation_project/src/test/resources/com.fivemobile.thescore_24.5.0.apk",
+      "automationName": "UiAutomator2",
+      "platformVersion": "14.0"
+    }
+]

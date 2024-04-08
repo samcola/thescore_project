@@ -1,0 +1,16 @@
+{
+  "NBA": {
+    "name": "NBA Basketball",
+    "teams": {
+      "NYK": "New York Knicks",
+      "BOS": "Boston Celtics"
+    }
+  },
+  "NFL": {
+    "name": "NFL Football",
+    "teams": {
+      "NYJ": "New York Jets",
+      "BUF": "Buffalo Bills"
+    }
+  }
+}
