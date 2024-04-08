@@ -48,4 +48,14 @@ public class HomePage extends BaseAction {
         return isElementPresent(mainPageSearchBar);
     }
 
+    public boolean isFavIconPresent(String iconText) {
+        return isElementPresent(By.xpath("//android.widget.TextView[@resource-id=\"com.fivemobile.thescore:id/label\" and @text=\"" + iconText + "\"]"));
+    }
+
+    public void clickFavIcon(String icon) {
+        if (isElementPresent(By.xpath("//android.widget.TextView[@resource-id=\"com.fivemobile.thescore:id/label\" and @text=\"" + icon + "\"]"))) {
+            click(By.xpath("//android.widget.TextView[@resource-id=\"com.fivemobile.thescore:id/label\" and @text=\"" + icon + "\"]"));
+        }
+    }
+
 }

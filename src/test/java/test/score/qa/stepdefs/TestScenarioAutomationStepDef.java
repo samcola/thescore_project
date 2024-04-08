@@ -12,6 +12,7 @@ import test.score.qa.pages.*;
 import test.score.qa.utils.JsonParserUtil;
 
 import java.util.Map;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class TestScenarioAutomationStepDef {
@@ -149,6 +150,67 @@ public class TestScenarioAutomationStepDef {
         Assert.assertEquals(title, hp.getTitleAfterAddBtnClick());
     }
 
+    @When("User selects a {string} with name {string}")
+    public void selectsOptionsFromDropDown(String option, String name) {
+        FavoritesPage fp = new FavoritesPage();
+        fp.selectSubTab(option.toLowerCase().trim());
+        fp.typeTextToSearchBar(name.toLowerCase().trim());
+        Boolean isAdded = fp.addOptionToFav();
+        if (isAdded) {
+            logger.log(Level.INFO, "Successfully added " + name + " for " + option);
+        } else {
+            logger.log(Level.INFO, "Failed to add " + name + " for " + option);
+        }
+    }
+
+    @And("User navigates back to home page")
+    public void navigateBackToHomePage() {
+        FavoritesPage fp = new FavoritesPage();
+        fp.clickCollapseBtn();
+        fp.clickNavigateUpBtn();
+    }
+
+    @Then("User sees the {string} icon")
+    public void verifyFavIcon(String iconName) {
+        HomePage hp = new HomePage();
+        Assert.assertTrue(hp.isFavIconPresent(iconName));
+    }
+
+    @When("User clicks the {string} icon")
+    public void clickIcon(String icon) {
+        HomePage hp = new HomePage();
+        hp.clickFavIcon(icon);
+    }
+
+    @Then("User sees the {string} sub tab")
+    public void verifySubTab(String subTabName) {
+        LeaguesSubTab lst = new LeaguesSubTab();
+        Assert.assertTrue(lst.isSubTabExists(subTabName));
+    }
+
+    @When("User clicks the {string} sub tab")
+    public void clickSubTab(String subTabName) {
+        LeaguesSubTab lst = new LeaguesSubTab();
+        lst.clickSubTab(subTabName);
+    }
+
+    @And("User sees the data in standings sub tab")
+    public void verifyStandingsData() {
+        LeaguesSubTab lst = new LeaguesSubTab();
+        Assert.assertTrue(lst.isStandingSubTabData());
+    }
+
+    @And("User sees the data in team stats sub tab")
+    public void verifyTeamStatsData() {
+        TeamStatsSubTab tsst = new TeamStatsSubTab();
+        Assert.assertTrue(tsst.isTeamStatsSubTab());
+    }
+
+    @And("User sees the data in info sub tab")
+    public void verifyInfoData() {
+        PlayerInfoSubtab pst = new PlayerInfoSubtab();
+        Assert.assertTrue(pst.isPlayerInfoSubTab());
+    }
 }
 
 
