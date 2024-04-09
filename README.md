@@ -4,7 +4,7 @@ Automate test cases that finds a league, team, or player within theScore app.
 ------------------------------------------------------
 
 ### Description
-It is the automation test tool used for TheScore application. This Application is consists of two main frameworks such as Appium and Cucumber. These platforms offer many advantages in this test suite such as, cross-platform compatibility and BDD approach. With the help of appium, it could automate multiple test cases in different devices. For the BDD approach, it integrates cucumber which enables us to write test scenarios in a natural-language that is understandable both in technical and business requirements for this application.
+It is the automation test tool used for TheScore application. This application is consists of two main frameworks such as Appium and Cucumber. These platforms offer many advantages in this test suite such as, cross-platform compatibility and BDD approach. With the help of appium, it could automate multiple test cases in different devices. For the BDD approach, it integrates cucumber which enables us to write test scenarios in a natural-language that is understandable both in technical and business requirements for this application.
 
 
 ### Tools Used : 
