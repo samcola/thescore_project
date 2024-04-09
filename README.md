@@ -25,7 +25,7 @@ It is the automation test tool used for TheScore application. This application i
       Optional: Run the appium server at 4723 port. Appium Server is auto started by the code
     * Run command : 
       mvn clean install -Dtest=TestBaseRunner
-    * After the successful run, Cucumber report should get generated in target folder(Note: change the format to 'html' because, it saves has document file)
+    * After the successful run, Cucumber report should get generated in target folder as cucumber-report(Note: change the format to 'html')
 
 ## Report
 
